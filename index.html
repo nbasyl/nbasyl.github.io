@@ -1,1 +1,158 @@
-Hello World
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Shih-Yang (Sean) Liu</title>
+ 
+    <meta name="author" content="Shih-Yang (Sean) Liu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Shih-Yang (Sean) Liu
+                </p>
+                <p>I'm a PhD student at HKUST, where I work on efficient deep learning (Compression and Parameter-efficient Finetuning).  I am a member of  <a href="http://vsdl.ust.hk/index.html">Vision and System Design Lab (VSDL)</a>, advised by <a href="https://seng.ust.hk/about/people/faculty/tim-kwang-ting-cheng?id=326">Prof. Tim Kwang-Ting CHENG</a>. I am also mentored by <a href="https://scholar.google.com/citations?user=lA7ylt4AAAAJ&hl=zh-CN">Zechun Liu</a>, and we work closely on model quantization.
+                </p>
+                <p>
+                  I am currently a reserach intern at Nvidia Research working on efficient deep learning.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:sliuau@connect.ust.hk">Email</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=eBXRoDgAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://twitter.com/nbasyl_tw">Twitter(X)</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/nbasyl/">Github</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:40%;max-width:40%">
+                <a href="images/sean_liu.png"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/sean_liu.png" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>
+                  I'm interested in model compression, efficient deep learning. Most of my research is about accelerating either the inference or training of deep learning model. Representative papers are <span class="highlight">highlighted</span>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr onmouseout="recon_stop()" onmouseover="recon_start()" bgcolor="#ffffd0">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='recon_image'></div>
+                  <img src='images/dora.png' width="160">
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://reconfusion.github.io/">
+              <span class="papertitle">DoRA: Weight-Decomposed Low-Rank Adaptation</span>
+                </a>
+                <br>
+                <strong>Shih-Yang Liu</strong>,
+                Chien-Yi Wang, Hongxu Yin, Pavlo Molchanov, Yu-Chiang Frank Wang, Kwang-Ting Cheng, Min-Hung Chen
+                <br>
+                <em>arXiv</em>, 2023
+                <br>
+                <a href="">project page(released soon)</a>
+                /
+                <a href="https://arxiv.org/abs/2402.09353">arXiv</a>
+                /
+                <a href="https://github.com/nbasyl/DoRA">code</a>
+                <p></p>
+                <p>
+                We presented DoRA, a new parameter-efficient fine-tuning approach, which consistently outperforms LoRA in fine-tuning LLM without incurring additional inference costs. These improvements are particularly notable for smaller ranks with 37.2% improvement over LoRA for rank 8 and 22.4% improvement for rank 4.
+                </p>
+              </td>
+            </tr>
+
+    <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='smerf_image'>
+          <img src='images/w2a2_deit_s_cga_vis_.png' width=100%>
+          
+        </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://smerf-3d.github.io/">
+          <span class="papertitle">Oscillation-free Quantization for Low-bit Vision Transformers</span>
+        </a>
+        <br><strong>Shih-Yang Liu</strong>, Zechun Liu, Kwang-Ting Cheng
+        <br>
+        <em>Proceedings of the 40th International Conference on Machine Learning (ICML)</em>, 2023
+        <br>
+        <a href="https://proceedings.mlr.press/v202/liu23w.html">Paper</a>
+        /
+        <a href="https://github.com/nbasyl/OFQ">Code</a>
+        <p></p>
+        <p>
+          In this study, we address weight oscillation in quantization-aware training and its negative impact on model performance. We propose three techniques: statistical weight quantization (StatsQ), confidence-guided annealing (CGA), and query-key reparameterization (QKR). These techniques improve quantization robustness and accuracy in the ViT model. The proposed 2-bit DeiT-T/DeiT-S algorithms outperform the previous state-of-the-art by 9.8% and 7.7%, respectively.     </p>
+      </td>
+    </tr>
+	
+
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='nuvo_image'></div>
+          <img src='images/fpq.png' width=100%>
+        </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://pratulsrinivasan.github.io/nuvo/">
+          <span class="papertitle">LLM-FP4: 4-Bit Floating-Point Quantized Transformers</span>
+        </a>
+        <br>
+        <strong>Shih-Yang Liu</strong>, Zechun Liu, Xijie Huang, Pingcheng Dong, Kwang-Ting Cheng
+        <br>
+        <em>Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP Main)</em>, 2023
+        <br>
+        <a href="https://aclanthology.org/2023.emnlp-main.39/">Paper</a>
+        /
+        <a href="https://github.com/nbasyl/LLM-FP4">Code</a>
+        <p></p>
+        <p>
+          We introduced LLM-FP4, a novel post-training quantization framework which for the first time is capable of quantizing both the activation and weight of LLM to 4 bits without substantial loss in accuracy, outperforming previous methods by up to 13.1%.         </p>
+      </td>
+    </tr>
+	
+
+
+
+
+        
+
+
+
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Thanks to Barron's website template.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
