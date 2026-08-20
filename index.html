@@ -22,13 +22,13 @@
                 <p class="name" style="text-align: center;">
                   Shih-Yang (Sean) Liu
                 </p>
-                <p>I'm a PhD student at HKUST, where I work on efficient deep learning (Compression and Parameter-efficient Finetuning).  I am a member of  <a href="http://vsdl.ust.hk/index.html">Vision and System Design Lab (VSDL)</a>, advised by <a href="https://seng.ust.hk/about/people/faculty/tim-kwang-ting-cheng?id=326">Prof. Tim Kwang-Ting CHENG</a>. I am also mentored by <a href="https://scholar.google.com/citations?user=lA7ylt4AAAAJ&hl=zh-CN">Zechun Liu</a>, and we work closely on model quantization.
+                <p>I'm a Research Scientist at <a href="https://www.nvidia.com/en-us/research/">NVIDIA Research</a>, where I work on efficient deep learning and reinforcement learning for LLM reasoning.
                 </p>
                 <p>
-                  I am currently a reserach intern at Nvidia Research working on efficient deep learning.
+                  I received my PhD from HKUST, where I was a member of the <a href="http://vsdl.ust.hk/index.html">Vision and System Design Lab (VSDL)</a>, advised by <a href="https://seng.ust.hk/about/people/faculty/tim-kwang-ting-cheng?id=326">Prof. Tim Kwang-Ting CHENG</a>. I was also mentored by <a href="https://scholar.google.com/citations?user=lA7ylt4AAAAJ&hl=zh-CN">Zechun Liu</a>, and we worked closely on model quantization.
                 </p>
                 <p style="text-align:center">
-                  <a href="mailto:sliuau@connect.ust.hk">Email</a> &nbsp;/&nbsp;
+                  <a href="mailto:shihyangl@nvidia.com">Email</a> &nbsp;/&nbsp;
                   <a href="https://scholar.google.com/citations?user=eBXRoDgAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
                   <a href="https://twitter.com/nbasyl_tw">Twitter(X)</a> &nbsp;/&nbsp;
                   <a href="https://github.com/nbasyl/">Github</a>
@@ -44,29 +44,56 @@
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p>
-                  I'm interested in model compression, efficient deep learning. Most of my research is about accelerating either the inference or training of deep learning model. Representative papers are <span class="highlight">highlighted</span>.
+                  I'm interested in efficient deep learning: model compression, parameter-efficient finetuning, and more recently reinforcement learning for efficient LLM reasoning. Most of my research is about getting more out of a model per unit of compute, whether at training or inference time. Representative papers are <span class="highlight">highlighted</span>.
                 </p>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-            <tr onmouseout="recon_stop()" onmouseover="recon_start()" bgcolor="#ffffd0">
+            <tr bgcolor="#ffffd0">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
-                  <div class="two" id='recon_image'></div>
+                  <div class="two" id='gdpo_image'></div>
+                  <img src='images/gdpo.png' width=100%>
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+
+              <span class="papertitle">GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization</span>
+                <br>
+                <strong>Shih-Yang Liu</strong>,
+                Xin Dong, Ximing Lu, Shizhe Diao, Peter Belcak, Mingjie Liu, Min-Hung Chen, Hongxu Yin, Yu-Chiang Frank Wang, Kwang-Ting Cheng, Yejin Choi, Jan Kautz, Pavlo Molchanov
+                <br>
+                <em>Proceedings of the 43rd International Conference on Machine Learning (ICML)</em>, 2026
+                <br>
+                <a href="https://nvlabs.github.io/GDPO/">project page</a>
+                /
+                <a href="https://arxiv.org/abs/2601.05242">arXiv</a>
+                /
+                <a href="https://github.com/NVlabs/GDPO">code</a>
+                <p></p>
+                <p>
+                We show that applying GRPO-style normalization to a summed multi-reward signal collapses distinct reward combinations into identical advantages, blinding the policy to per-reward progress. GDPO instead normalizes each reward independently within the group before aggregation, a drop-in replacement for GRPO that improves per-reward convergence and lifts AIME accuracy by up to 6.3%.
+                </p>
+              </td>
+            </tr>
+
+            <tr bgcolor="#ffffd0">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='dora_image'></div>
                   <img src='images/dora.png' width="160">
                 </div>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
                 
               <span class="papertitle">DoRA: Weight-Decomposed Low-Rank Adaptation</span>
-                </a>
                 <br>
                 <strong>Shih-Yang Liu</strong>,
                 Chien-Yi Wang, Hongxu Yin, Pavlo Molchanov, Yu-Chiang Frank Wang, Kwang-Ting Cheng, Min-Hung Chen
                 <br>
-                <em>Proceedings of the 41th International Conference on Machine Learning (ICML)</em>, 2024
+                <em>Proceedings of the 41st International Conference on Machine Learning (ICML)</em>, 2024 &nbsp;<strong>(Oral)</strong>
                 <br>
                 <a href="https://nbasyl.github.io/DoRA-project-page/">project page</a>
                 /
@@ -80,18 +107,72 @@
               </td>
             </tr>
 
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='dler_image'></div>
+                  <img src='images/dler.png' width=100%>
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+
+                <span class="papertitle">DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via Reinforcement Learning</span>
+                <br>
+                <strong>Shih-Yang Liu</strong>,
+                Xin Dong, Ximing Lu, Shizhe Diao, Mingjie Liu, Min-Hung Chen, Hongxu Yin, Yu-Chiang Frank Wang, Kwang-Ting Cheng, Yejin Choi, Jan Kautz, Pavlo Molchanov
+                <br>
+                <em>International Conference on Learning Representations (ICLR)</em>, 2026
+                <br>
+                <a href="https://nvlabs.github.io/DLER/">project page</a>
+                /
+                <a href="https://arxiv.org/abs/2510.15110">arXiv</a>
+                /
+                <a href="https://github.com/NVlabs/DLER">code</a>
+                <p></p>
+                <p>
+                  We show that the accuracy drop under length penalties comes from inadequate RL optimization rather than the penalty design itself, identifying advantage-estimation bias, entropy collapse, and sparse reward as the culprits. DLER combines batch-wise reward normalization, higher clipping, dynamic sampling, and a simple truncation penalty to cut chain-of-thought length by 50-70% with no loss in accuracy.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='eora_image'></div>
+                  <img src='images/eora.png' width=100%>
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+
+                <span class="papertitle">EoRA: Fine-tuning-free Compensation for Compressed LLM with Eigenspace Low-Rank Approximation</span>
+                <br>
+                <strong>Shih-Yang Liu</strong>,
+                Maksim Khadkevich, Nai Chit Fung, Charbel Sakr, Chao-Han Huck Yang, Chien-Yi Wang, Saurav Muralidharan, Hongxu Yin, Kwang-Ting Cheng, Jan Kautz, Yu-Chiang Frank Wang, Pavlo Molchanov, Min-Hung Chen
+                <br>
+                <em>ICLR Workshop</em>, 2026
+                <br>
+                <a href="https://arxiv.org/abs/2410.21271">arXiv</a>
+                /
+                <a href="https://github.com/NVlabs/EoRA">code</a>
+                /
+                <a href="https://developer.nvidia.com/blog/a-fine-tuning-free-approach-for-rapidly-recovering-llm-compression-errors-with-eora/">blog</a>
+                <p></p>
+                <p>
+                  EoRA augments a compressed LLM with task-specific low-rank matrices derived in the eigenspace of the compression error, recovering accuracy in minutes without any fine-tuning. It improves 3-bit LLaMA3-8B by 10.84% on ARC-Challenge, 6.74% on MathQA, and 11.45% on GSM8K over prior training-free low-rank methods.
+                </p>
+              </td>
+            </tr>
+
     <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='smerf_image'>
+          <div class="two" id='smerf_image'></div>
           <img src='images/w2a2_deit_s_cga_vis_.png' width=100%>
-          
         </div>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
         
           <span class="papertitle">Oscillation-free Quantization for Low-bit Vision Transformers</span>
-        </a>
         <br><strong>Shih-Yang Liu</strong>, Zechun Liu, Kwang-Ting Cheng
         <br>
         <em>Proceedings of the 40th International Conference on Machine Learning (ICML)</em>, 2023
@@ -116,7 +197,6 @@
       <td style="padding:20px;width:75%;vertical-align:middle">
         
           <span class="papertitle">LLM-FP4: 4-Bit Floating-Point Quantized Transformers</span>
-        </a>
         <br>
         <strong>Shih-Yang Liu</strong>, Zechun Liu, Xijie Huang, Pingcheng Dong, Kwang-Ting Cheng
         <br>
@@ -153,6 +233,6 @@
           </tbody></table>
         </td>
       </tr>
-    </table>
+    </tbody></table>
   </body>
 </html>
